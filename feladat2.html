@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.js"></script>
+    
+    <script>
+        $(function(){
+            //gombotHozzaad();
+            $("#nagybetus").click(nagybetus)
+            $("#visszafele").click(mukodik)
+            $("#szavak").click(mukodik)
+            $("#hossza").click(mukodik)
+            $("#szokozNelkul").click(mukodik)
+        });
+
+        function nagybetus(){
+            $("#output").html($("#input").val().toUpperCase());
+        }
+
+        // function gombotHozzaad(){
+        //     $("#nagybetus").click(mukodik)
+        //     $("#visszafele").click(mukodik)
+        //     $("#szavak").click(mukodik)
+        //     $("#hossza").click(mukodik)
+        //     $("#szokozNelkul").click(mukodik)
+        // };
+
+        function mukodik(){
+            alert('működik')
+        }
+    </script>
+</head>
+<body>
+    <input id="input"><br>
+    <p id="output"></p>
+    <button id="nagybetus">Nagybetűs</button><br>
+    <button id="visszafele">Visszafelé</button><br>
+    <button id="szavak">Szavak</button><br>
+    <button id="hossza">Hossza</button><br>
+    <button id="szokozNelkul">Szóköz nélkül</button><br>
+</body>
+</html>
