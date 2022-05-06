@@ -14,7 +14,7 @@
             $("#nagybetus").click(nagybetus)
             $("#visszafele").click(visszafele)
             $("#szavak").click(szavak)
-            $("#hossza").click(mukodik)
+            $("#hossza").click(hossza)
             $("#szokozNelkul").click(mukodik)
         });
 
@@ -35,6 +35,10 @@
             //lista += `</ul>`;
             //const lista = $()
             $("#output").html(`<ul>` + lista + `</ul>`);
+        }
+
+        function hossza(){
+            $("#output").html($("#input").val().length);
         }
 
         // function gombotHozzaad(){
