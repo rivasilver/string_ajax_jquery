@@ -12,7 +12,7 @@
         $(function(){
             //gombotHozzaad();
             $("#nagybetus").click(nagybetus)
-            $("#visszafele").click(mukodik)
+            $("#visszafele").click(visszafele)
             $("#szavak").click(mukodik)
             $("#hossza").click(mukodik)
             $("#szokozNelkul").click(mukodik)
@@ -20,6 +20,10 @@
 
         function nagybetus(){
             $("#output").html($("#input").val().toUpperCase());
+        }
+
+        function visszafele(){
+            $("#output").html($("#input").val().split("").reverse().join(""));
         }
 
         // function gombotHozzaad(){
