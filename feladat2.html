@@ -27,14 +27,17 @@
         }
 
         function szavak(){
-            const input = $("#input").val().split(" ");
-            //const lista = `<ul>`;
-            const lista = $(input).forEach(element => {
-                `<li>{element}</li>`
-            });
-            //lista += `</ul>`;
+            const input = $("#input").val().split(' ');
+            let lista = `<ul>`;
+            // lista += $(input).each(element => {
+            //     `<li>{element}</li>`
+            // });
+            $(input).each(function(index, value) {
+                lista += (`<li>${value}</li>`);
+                });
+            lista += `</ul>`;
             //const lista = $()
-            $("#output").html(`<ul>` + lista + `</ul>`);
+            $("#output").html(lista);
         }
 
         function hossza(){
